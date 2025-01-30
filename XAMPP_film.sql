@@ -14,3 +14,5 @@ ALTER TABLE film ADD zanrID int;
 
 ALTER TABLE film ADD CONSTRAINT fk_zanr
 FOREIGN KEY (zanrID) REFERENCES zanr(zanrID);
+
+UPDATE film SET zanrID=2 WHERE filmID=3
