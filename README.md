@@ -1,4 +1,4 @@
-XAMPP protseduurid
+<b>-- XAMPP protseduurid --</b>
 
 ![image](https://github.com/user-attachments/assets/7f4b699b-772f-4daa-a11f-06db253acfda)
 
@@ -6,4 +6,5 @@ XAMPP protseduurid
 
 ![image](https://github.com/user-attachments/assets/c02f9239-6b75-4ba7-b384-0f9b2df58e3d)
 
+![image](https://github.com/user-attachments/assets/8cfb0f32-9e3c-4820-a413-34276a9fe5bc)
 
