@@ -4,3 +4,6 @@ XAMPP protseduurid
 
 ![image](https://github.com/user-attachments/assets/9af2573f-f798-49c9-857b-9bfe27a84a2d)
 
+![image](https://github.com/user-attachments/assets/c02f9239-6b75-4ba7-b384-0f9b2df58e3d)
+
+
