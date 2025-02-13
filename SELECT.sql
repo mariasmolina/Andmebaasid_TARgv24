@@ -70,8 +70,32 @@ WHERE nimi LIKE '_a__'
 
 
 --TINGIMUSE KOMBINEERIMINE
---AND / OR
+--OR (kõik võimalikud variandid)
 SELECT nimi, synnilinn
 FROM laps
 WHERE nimi LIKE '%K%' 
 OR synnilinn LIKE 'Tartu';
+--AND
+SELECT nimi, synnilinn
+FROM laps
+WHERE nimi LIKE '%K%' 
+AND synnilinn LIKE 'Tartu';
+
+
+--Agregaatfunktsioonid
+-- SUM, AVG, MIN, MAX, COUNT
+SELECT COUNT(nimi) AS lasteARV --uus veerg (ei salesta tabelisse)
+FROM laps;
+
+-- 'laste Arv' - kirjutame nii, kui soovime ruumi tekstis
+SELECT AVG(pikkus) AS 'keskmine pikkus'
+FROM laps;
+
+--lisame tingimus
+SELECT AVG(pikkus) AS 'keskmine pikkus'
+FROM laps
+WHERE synnilinn='Tallinn';
+
+--näita keskmine pikkus linnade järgi
+-- GROUP by
+
