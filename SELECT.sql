@@ -154,7 +154,7 @@ ON loom.lapsID=laps.lapsID;
 SELECT * FROM loom, laps
 WHERE loom.lapsID=laps.lapsID;
 
---anname hüüdnimi (psedonim)
+--anname hüüdnimi (psevdonim)
 SELECT l.loomNimi, la.nimi, la.synniaasta 
 FROM loom l, laps la
 WHERE l.lapsID=la.lapsID;
