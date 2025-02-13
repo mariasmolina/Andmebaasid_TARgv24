@@ -96,6 +96,29 @@ SELECT AVG(pikkus) AS 'keskmine pikkus'
 FROM laps
 WHERE synnilinn='Tallinn';
 
---näita keskmine pikkus linnade järgi
+--näita keskmine pikkus linnade järgi (2 veergu)
 -- GROUP by
+SELECT AVG(pikkus) AS 'keskmine pikkus', synnilinn
+FROM laps
+GROUP by synnilinn
+
+--näita laste arv, mis on sündinud konkreetselt synniaastal
+SELECT synniaasta, COUNT(*) AS 'laste arv'
+FROM laps
+GROUP by synniaasta;
+
+
+--HAVING - piirang juba grupeeritud andmete osas (lõpus)
+--keskmine pikkus, iga synniaasta järgi
+SELECT synniaasta, AVG(pikkus) AS keskmine
+FROM laps
+GROUP by synniaasta
+HAVING AVG(pikkus)>150; --tingimus
+
+SELECT synniaasta, AVG(pikkus) AS keskmine
+FROM laps
+WHERE NOT synniaasta=2001
+GROUP by synniaasta;
+
+
 
