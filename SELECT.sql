@@ -68,6 +68,12 @@ SELECT nimi
 FROM laps
 WHERE nimi LIKE '_a__'
 
+--riigid, mille nimed algavad täishäälikuga (A, E, I, O, U, Y)
+SELECT Name
+FROM country
+WHERE Name RLIKE '^[AEIOUY]';  
+
+
 
 --TINGIMUSE KOMBINEERIMINE
 --OR (kõik võimalikud variandid)
