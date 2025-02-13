@@ -121,4 +121,40 @@ WHERE NOT synniaasta=2001
 GROUP by synniaasta;
 
 
+------------------------------------
+--seotud tabel (nt 2 tabelid seotud
+CREATE TABLE loom(
+loomID int PRIMARY KEY identity(1,1),
+loomNimi varchar(50),
+lapsID int,
+FOREIGN KEY (lapsID) REFERENCES laps(lapsID)
+);
 
+INSERT INTO loom(loomNimi, lapsID)
+VALUES('kass Kott', 1),
+('koer Bobik',1),
+('koer Tuzik',2),
+('koer Bobik',1),
+('kass Murzik',3),
+('kilpkonn Mura',3),
+('kass Feli',3);
+
+SELECT * FROM loom;
+
+--select seotud tabelite põhjal
+SELECT * FROM loom, laps; -- ei näita õiged andmed
+
+-- näitab õigesti (keeruline vaade)
+-- INNER JOIN
+SELECT * FROM loom
+INNER JOIN laps
+ON loom.lapsID=laps.lapsID;
+
+--näitab õigesti (lihtne vaade)
+SELECT * FROM loom, laps
+WHERE loom.lapsID=laps.lapsID;
+
+--anname hüüdnimi (psedonim)
+SELECT l.loomNimi, la.nimi, la.synniaasta 
+FROM loom l, laps la
+WHERE l.lapsID=la.lapsID;
